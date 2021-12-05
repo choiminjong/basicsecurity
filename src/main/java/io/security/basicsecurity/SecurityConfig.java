@@ -25,26 +25,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated();
         http
                 .formLogin()
-                //.loginPage("/loginPage")
-                //.failureUrl("/login")
-                .usernameParameter("userId")
-                .passwordParameter("passwd")
-                //.loginProcessingUrl("login_proc")
-                .successHandler(new AuthenticationSuccessHandler() {
-                    @Override
-                    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-                        System.out.println("onAuthenticationSuccess 성공!!!!!!!");
-                        response.sendRedirect("/");
-                    }
-                })
-                .failureHandler(new AuthenticationFailureHandler() {
-                    @Override
-                    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
-                        System.out.println("onAuthenticationFailure 실패!!!");
-                        response.sendRedirect("/login");
-                    }
-                })
-                //.permitAll()
+//                .loginPage("/loginPage")
+//                .failureUrl("/login")
+//                .usernameParameter("userId")
+//                .passwordParameter("passwd")
+//                .loginProcessingUrl("login_proc")
+//                .successHandler(new AuthenticationSuccessHandler() {
+//                    @Override
+//                    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+//                        System.out.println("onAuthenticationSuccess 성공!!!!!!!");
+//                        response.sendRedirect("/");
+//                    }
+//                })
+//                .failureHandler(new AuthenticationFailureHandler() {
+//                    @Override
+//                    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
+//                        System.out.println("onAuthenticationFailure 실패!!!");
+//                        response.sendRedirect("/login");
+//                    }
+//                })
+//                .permitAll()
         ;
     }
 }
